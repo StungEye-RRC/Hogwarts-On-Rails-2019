@@ -1,7 +1,17 @@
 class HousesController < ApplicationController
-  def index
-  end
 
-  def show
+  # GET /houses
+  # GET /
+  def index
+    @houses = House.order(:name)
   end
+  # The associated view is auto-loaded: app/views/houses/index.html.erb
+  # Instance variables like @houses are shared with the view.
+
+  # GET /houses/:id
+  def show
+    @house = House.find(params[:id])
+  end
+  # The associated view is auto-loaded: app/views/houses/show.html.erb
+  # The @house instance variable will be shared with the view.
 end

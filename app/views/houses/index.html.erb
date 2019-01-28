@@ -1,2 +1,7 @@
-<h1>Houses#index</h1>
-<p>Find me in app/views/houses/index.html.erb</p>
+<h2>All Houses</h2>
+
+<ul>
+  <% @houses.each do |house| %>
+    <li><%= link_to house.name, house %> has <%= pluralize(house.points, 'point') %>.</li>
+  <% end %>
+</ul>
