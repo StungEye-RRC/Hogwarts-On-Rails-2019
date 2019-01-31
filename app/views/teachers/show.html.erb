@@ -1,2 +1,4 @@
-<h1>Teachers#show</h1>
-<p>Find me in app/views/teachers/show.html.erb</p>
+<h2><%= @teacher.name %></h2>
+
+<p>This teacher belongs to house <%= @teacher.house.name %>.</p>
+<p>There are <%= @teacher.house.teachers.size %> other teachers in this house.</p>
