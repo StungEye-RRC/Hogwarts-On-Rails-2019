@@ -10,7 +10,7 @@ class HousesController < ApplicationController
 
   # GET /houses/:id
   def show
-    @house = House.find(params[:id])
+    @house = House.includes(:students, :teachers).find(params[:id])
   end
   # The associated view is auto-loaded: app/views/houses/show.html.erb
   # The @house instance variable will be shared with the view.

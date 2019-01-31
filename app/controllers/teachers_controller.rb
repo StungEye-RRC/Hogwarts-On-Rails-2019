@@ -1,9 +1,9 @@
 class TeachersController < ApplicationController
   def index
-    @teachers = Teacher.order(:name)
+    @teachers = Teacher.includes(:house).order(:name)
   end
 
   def show
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.includes(:house).find(params[:id])
   end
 end
