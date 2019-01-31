@@ -2,5 +2,21 @@
 
 <p>Points: <%= @house.points %></p>
 <p>Students: <%= @house.students.size %></p>
+<p>Teachers: <%= @house.teachers.size %></p>
+
+<h3>Teacher</h3>
+<ul>
+  <% @house.teachers.each do |teacher| %>
+    <li><%= teacher.name %></li>
+  <% end %>
+</ul>
+
+<h3>Student</h3>
+<ul>
+  <% @house.students.each do |student| %>
+    <li><%= student.name %></li>
+  <% end %>
+</ul>
+
 
 <p><%= link_to 'Home', houses_path %></p>
