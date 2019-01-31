@@ -10,7 +10,16 @@
   </head>
 
   <body>
-    <h1>Welcome to Hogwarts</h1>
+    <header>
+      <h1>Welcome to Hogwarts</h1>
+      <nav>
+        <ul>
+          <li><%= link_to 'Houses', root_path %></li>
+          <li><%= link_to 'Students', students_path %></li>
+          <li><%= link_to 'Teachers', teachers_path %></li>
+        </ul>
+      </nav>
+    </header>
 
     <%= yield %>
 
