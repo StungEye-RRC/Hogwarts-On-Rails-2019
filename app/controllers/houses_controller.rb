@@ -14,4 +14,8 @@ class HousesController < ApplicationController
   end
   # The associated view is auto-loaded: app/views/houses/show.html.erb
   # The @house instance variable will be shared with the view.
+
+  def about
+    # Static Page
+  end
 end
