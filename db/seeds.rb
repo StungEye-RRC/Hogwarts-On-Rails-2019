@@ -18,6 +18,9 @@ House.destroy_all
   end
 end
 
+Page.create(title: 'About Us', content: "Hogwarts School of Witchcraft and Wizardry, shortened to Hogwarts, is a fictional British school of magic for students aged eleven to eighteen, and is the primary setting for the first six books in J.K. Rowling's Harry Potter series.", permalink: 'about-us')
+Page.create(title: 'Contact', content: "Contact us by owl mail or by magic spell.", permalink: 'contact')
+
 puts "Number of houses:   #{House.count}"
 puts "Number of students: #{Student.count}"
 puts "Number of teachers: #{Teacher.count}"
