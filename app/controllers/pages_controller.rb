@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   # GET /pages/:permalink
   def permalink
     @page = Page.find_by(permalink: params[:permalink])
+
+    redirect_to root_path if @page.nil?
   end
 
   # GET /pages
